@@ -13,15 +13,17 @@ namespace GameHero.Model
         private const int DEFAULT_MAX_GENERATE_ATRIBUTE = 3;
         private const int DEFAULT_MIN_GENERATE_PRICE = 20;
         private const int DEFAULT_MAX_GENERATE_PRICE = 60;
-        private const int DEFAULT_GENERATE_TYPE = 3;
 
-        private const int DEFAULT_NUMBER_TYPE_ORB = 0;
-        private const int DEFAULT_NUMBER_TYPE_NECK = 1;
-        private const int DEFAULT_NUMBER_TYPE_RING = 2;
+        public enum ArtefactType
+        {
+            ORB,
+            NECK,
+            RING
+        }
 
         public static Artefact GenerateRandomArtefacts(int dungeonCurrentLevel)
         {
-            Artefact result;
+            Artefact result = null;
             Random randomGenerate = new Random();
             string name = "Random Artefacts " + randomGenerate.Next(DEFAULT_GENERATE_NAME);
             int str = randomGenerate.Next(DEFAULT_MIN_GENERATE_ATRIBUTE, DEFAULT_MAX_GENERATE_ATRIBUTE) * dungeonCurrentLevel;
@@ -30,20 +32,21 @@ namespace GameHero.Model
             int con = randomGenerate.Next(DEFAULT_MIN_GENERATE_ATRIBUTE, DEFAULT_MAX_GENERATE_ATRIBUTE) * dungeonCurrentLevel;
             int price = randomGenerate.Next(DEFAULT_MIN_GENERATE_PRICE, DEFAULT_MAX_GENERATE_PRICE) * dungeonCurrentLevel;
 
-            int type = randomGenerate.Next(DEFAULT_GENERATE_TYPE);
+            ArtefactType type = (ArtefactType)randomGenerate.Next((int)ArtefactType.RING + 1);
 
-            if (type == DEFAULT_NUMBER_TYPE_ORB)
+            switch (type)
             {
-                result = new Orb(name, str, intel, dex, con, price);
-            }
-            else if (type == DEFAULT_NUMBER_TYPE_NECK)
-            {
-                result = new Neck(name, str, intel, dex, con, price);
-
-            }
-            else
-            {
-                result = new Ring(name, str, intel, dex, con, price);
+                case ArtefactType.ORB:
+                    result = new Orb(name, str, intel, dex, con, price);
+                    break;
+                case ArtefactType.NECK:
+                    result = new Neck(name, str, intel, dex, con, price);
+                    break;
+                case ArtefactType.RING:
+                    result = new Ring(name, str, intel, dex, con, price);
+                    break;
+                default:
+                    break;
             }
 
             return result;
