@@ -9,6 +9,8 @@ using GameHero.View;
 
 namespace GameHero.Model
 {
+    public delegate bool SortAtributeDelegate(Artefact a1, Artefact a2);
+    public delegate bool SearchArthefactsDelegate<T>(Artefact a1, T predicate);
     public class HeroLogic
     {
         private const int EVADE_CHANCE_RANDOM = 100;
@@ -77,7 +79,7 @@ namespace GameHero.Model
             }
         }
 
-        public List<Artefact> HeroInventorySort(Hero hero, ICompareArtefacts compareArtefacts)
+        public List<Artefact> HeroInventorySort(Hero hero, SortAtributeDelegate sortAtributeDelegate)
         {
             List<Artefact> sortedInventory = new List<Artefact>();
 
@@ -90,7 +92,7 @@ namespace GameHero.Model
             {
                 for (int j = i + 1; j < sortedInventory.Count; j++)
                 {
-                    if (compareArtefacts.Compare(sortedInventory[i], sortedInventory[j]))
+                    if (sortAtributeDelegate(sortedInventory[i], sortedInventory[j]))
                     {
                         Artefact temp = sortedInventory[i];
                         sortedInventory[i] = sortedInventory[j];
@@ -102,13 +104,13 @@ namespace GameHero.Model
             return sortedInventory;
         }
 
-        public List<Artefact> HeroInventorySearch<T>(Hero hero, ISearchArtefacts<T> searchArtefacts, T predicate)
+        public List<Artefact> HeroInventorySearch<T>(Hero hero, T predicate, SearchArthefactsDelegate<T> searchArthefactsDelegate)
         {
             List<Artefact> searchInInventory = new List<Artefact>();
 
             foreach (Artefact item in hero.HeroArtefacts)
             {
-                if (searchArtefacts.Predicate(item, predicate))
+                if (searchArthefactsDelegate(item, predicate))
                 {
                     searchInInventory.Add(item);
                 }

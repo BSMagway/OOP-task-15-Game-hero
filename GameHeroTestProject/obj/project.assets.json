@@ -5738,11 +5738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+      "projectUniqueName": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj",
       "projectName": "GameHeroTestProject",
-      "projectPath": "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+      "projectPath": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj",
       "packagesPath": "C:\\Users\\402-1\\.nuget\\packages\\",
-      "outputPath": "E:\\OOP\\GameHero\\GameHeroTestProject\\obj\\",
+      "outputPath": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\402-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5759,8 +5759,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj": {
-              "projectPath": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj"
+            "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj": {
+              "projectPath": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj"
             }
           }
         }

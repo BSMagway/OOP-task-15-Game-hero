@@ -17,8 +17,7 @@ namespace GameHero.Model
 
             if (hero.SetMoneyOutcome(Inn.GetInctance().PriceRest))
             {
-                hero.SetCurrentHealthToFullHealth();
-                hero.SetCurrentManaToFullMana();
+                HeroLogic.GetInctance().HeroFullRestoreHealthAndMana(hero);
                 Printer.Print("\nHealth and mana are full.");
             }
             else

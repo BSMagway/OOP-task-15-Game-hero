@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj",
+      "projectUniqueName": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj",
       "projectName": "GameHero",
-      "projectPath": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj",
+      "projectPath": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj",
       "packagesPath": "C:\\Users\\402-1\\.nuget\\packages\\",
-      "outputPath": "E:\\OOP\\GameHero\\GameHero\\obj\\",
+      "outputPath": "D:\\OOP\\GitHubRep\\GameHero\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\402-1\\AppData\\Roaming\\NuGet\\NuGet.Config",

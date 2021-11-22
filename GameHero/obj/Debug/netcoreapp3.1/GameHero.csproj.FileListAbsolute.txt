@@ -24,3 +24,16 @@ E:\OOP\GameHero\GameHero\bin\Debug\netcoreapp3.1\GameHero.dll
 E:\OOP\GameHero\GameHero\bin\Debug\netcoreapp3.1\GameHero.pdb
 E:\OOP\GameHero\GameHero\obj\Debug\netcoreapp3.1\GameHero.genruntimeconfig.cache
 E:\OOP\GameHero\GameHero\obj\Debug\netcoreapp3.1\GameHero.csproj.AssemblyReference.cache
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.exe
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.deps.json
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.runtimeconfig.json
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.runtimeconfig.dev.json
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.dll
+D:\OOP\GitHubRep\GameHero\bin\Debug\netcoreapp3.1\GameHero.pdb
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.csproj.AssemblyReference.cache
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.AssemblyInfoInputs.cache
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.AssemblyInfo.cs
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.csproj.CoreCompileInputs.cache
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.dll
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.pdb
+D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.genruntimeconfig.cache

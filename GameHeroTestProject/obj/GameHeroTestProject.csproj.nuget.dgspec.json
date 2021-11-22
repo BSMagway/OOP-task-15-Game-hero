@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj": {}
+    "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj": {}
   },
   "projects": {
-    "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj": {
+    "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+        "projectUniqueName": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj",
         "projectName": "GameHeroTestProject",
-        "projectPath": "E:\\OOP\\GameHero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+        "projectPath": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\GameHeroTestProject.csproj",
         "packagesPath": "C:\\Users\\402-1\\.nuget\\packages\\",
-        "outputPath": "E:\\OOP\\GameHero\\GameHeroTestProject\\obj\\",
+        "outputPath": "D:\\OOP\\GitHubRep\\GameHeroTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\402-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj": {
-                "projectPath": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj"
+              "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj": {
+                "projectPath": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj": {
+    "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj",
+        "projectUniqueName": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj",
         "projectName": "GameHero",
-        "projectPath": "E:\\OOP\\GameHero\\GameHero\\GameHero.csproj",
+        "projectPath": "D:\\OOP\\GitHubRep\\GameHero\\GameHero.csproj",
         "packagesPath": "C:\\Users\\402-1\\.nuget\\packages\\",
-        "outputPath": "E:\\OOP\\GameHero\\GameHero\\obj\\",
+        "outputPath": "D:\\OOP\\GitHubRep\\GameHero\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\402-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
