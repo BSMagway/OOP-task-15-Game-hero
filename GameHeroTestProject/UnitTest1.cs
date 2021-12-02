@@ -89,10 +89,5 @@ namespace GameHeroTestProject
                 hero.Constitution, hero.FullHealth, hero.FullMana, hero.CurrentHealth, hero.CurrentMana};
             CollectionAssert.AreEqual(expectedList, actualList);
         }
-
-        [TestMethod]
-        public 
-
-
     }
 }

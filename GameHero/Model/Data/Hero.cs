@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using GameHero.Model.Data.Artefact;
@@ -45,6 +46,9 @@ namespace GameHero.Model.Data
         public int Constitution { get; private set; }
         public int Money { get; private set; }
 
+        //public IList<Artefact.Artefact> HeroArtefacts { get; private set; }
+
+        public ArtefactList<Artefact.Artefact> ArtefactList { get; private set; }
 
         public int FullHealth
         {
@@ -122,8 +126,6 @@ namespace GameHero.Model.Data
             SetFullHealthManaPowerEvade(Constitution, Intellect, Strength, Dexterity);
         }
 
-        public List<Artefact.Artefact> HeroArtefacts { get; private set; }
-
         public Hero() : this(DEFAULT_NAME, DEFAULT_START_PARAMETR_STR, DEFAULT_START_PARAMETR_INT, DEFAULT_START_PARAMETR_DEX, DEFAULT_START_PARAMETR_CON, DEFULT_START_PARAMETR_MONEY)
         {
         }
@@ -144,7 +146,7 @@ namespace GameHero.Model.Data
             CurrentHealth = fullHealth;
             CurrentMana = fullMana;
 
-            HeroArtefacts = new List<Artefact.Artefact>();
+            ArtefactList = new ArtefactList<Artefact.Artefact>();
         }
 
         private void SetFullHealthManaPowerEvade(int constitution, int intellect, int strength, int dexterity)
@@ -215,10 +217,10 @@ namespace GameHero.Model.Data
         {
             if (artefact is null)
             {
-                throw new NullReferenceException($"{nameof(artefact)} is null");
+                throw new ArgumentNullException($"{nameof(artefact)} is null");
             }
 
-            HeroArtefacts.Add(artefact);
+            ArtefactList.AddArtefact(artefact);
 
             Strength += artefact.Strength;
             Intellect += artefact.Intellect;
@@ -231,10 +233,10 @@ namespace GameHero.Model.Data
 
         public void RemoveArtefact(int index)
         {
-            Strength -= HeroArtefacts[index].Strength;
-            Intellect -= HeroArtefacts[index].Intellect;
-            Dexterity -= HeroArtefacts[index].Dexterity;
-            Constitution -= HeroArtefacts[index].Constitution;
+            Strength -= ArtefactList[index].Strength;
+            Intellect -= ArtefactList[index].Intellect;
+            Dexterity -= ArtefactList[index].Dexterity;
+            Constitution -= ArtefactList[index].Constitution;
 
             SetFullHealthManaPowerEvade(Constitution, Intellect, Strength, Dexterity);
 
@@ -248,7 +250,7 @@ namespace GameHero.Model.Data
                 CurrentMana = FullMana;
             }
 
-            HeroArtefacts.RemoveAt(index);
+            ArtefactList.RemoveArtefactByIndex(index);
         }
 
         public string HeroInfo()
@@ -262,14 +264,14 @@ namespace GameHero.Model.Data
             heroInfo.Append($"\nConstitution: {Constitution}");
             heroInfo.Append($"\nMoney: {Money}");
             heroInfo.Append($"\nHero artefacts:");
-            heroInfo.Append(ArtefactLogic.InfoAboutArtefactsList(HeroArtefacts));
+            heroInfo.Append(ArtefactLogic.InfoAboutArtefactsList(ArtefactList));
 
             return heroInfo.ToString();
         }
 
         public override string ToString()
         {
-            return $"Hero name: {Name} \nlevel: {Level}\t artefacts: {HeroArtefacts.Count} \nHealth: {CurrentHealth}\t Mana: {CurrentMana}";
+            return $"Hero name: {Name} \nlevel: {Level}\t artefacts: {ArtefactList.Size()} \nHealth: {CurrentHealth}\t Mana: {CurrentMana}";
         }
     }
 }

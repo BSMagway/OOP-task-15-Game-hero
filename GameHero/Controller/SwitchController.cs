@@ -61,7 +61,7 @@ namespace GameHero.Controller
             Menu.SortHeroInventory();
             Printer.Print("\nHero enter key: ");
             string key = Console.ReadLine();
-            List<Artefact> result;
+            ArtefactList<Artefact> result;
 
             switch (key)
             {
@@ -120,7 +120,7 @@ namespace GameHero.Controller
             Menu.SerchIntHeroInventory();
             Printer.Print("\nHero enter key: ");
             string key = Console.ReadLine();
-            List<Artefact> result;
+            ArtefactList<Artefact> result;
             int predicateInt;
             string predicateString;
 

@@ -40,7 +40,7 @@ namespace GameHero.Model
 
             int result = 0;
 
-            foreach (Artefact item in hero.HeroArtefacts)
+            foreach (Artefact item in hero.ArtefactList)
             {
                 result += item.Price;
             }
@@ -79,18 +79,18 @@ namespace GameHero.Model
             }
         }
 
-        public List<Artefact> HeroInventorySort(Hero hero, SortAtributeDelegate sortAtributeDelegate)
+        public ArtefactList<Artefact> HeroInventorySort(Hero hero, SortAtributeDelegate sortAtributeDelegate)
         {
-            List<Artefact> sortedInventory = new List<Artefact>();
+            ArtefactList<Artefact> sortedInventory = new ArtefactList<Artefact>();
 
-            foreach (Artefact item in hero.HeroArtefacts)
+            foreach (Artefact item in hero.ArtefactList)
             {
-                sortedInventory.Add(item);
+                sortedInventory.AddArtefact(item);
             }
 
-            for (int i = 0; i < (sortedInventory.Count - 1); i++)
+            for (int i = 0; i < (sortedInventory.Size() - 1); i++)
             {
-                for (int j = i + 1; j < sortedInventory.Count; j++)
+                for (int j = i + 1; j < sortedInventory.Size(); j++)
                 {
                     if (sortAtributeDelegate(sortedInventory[i], sortedInventory[j]))
                     {
@@ -104,15 +104,15 @@ namespace GameHero.Model
             return sortedInventory;
         }
 
-        public List<Artefact> HeroInventorySearch<T>(Hero hero, T predicate, SearchArthefactsDelegate<T> searchArthefactsDelegate)
+        public ArtefactList<Artefact> HeroInventorySearch<T>(Hero hero, T predicate, SearchArthefactsDelegate<T> searchArthefactsDelegate)
         {
-            List<Artefact> searchInInventory = new List<Artefact>();
+            ArtefactList<Artefact> searchInInventory = new ArtefactList<Artefact>();
 
-            foreach (Artefact item in hero.HeroArtefacts)
+            foreach (Artefact item in hero.ArtefactList)
             {
                 if (searchArthefactsDelegate(item, predicate))
                 {
-                    searchInInventory.Add(item);
+                    searchInInventory.AddArtefact(item);
                 }
             }
 

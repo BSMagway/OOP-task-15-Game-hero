@@ -26,9 +26,9 @@ namespace GameHero.Model
                 throw new ArgumentNullException($"{nameof(shop)} is null");
             }
 
-            List<Artefact> artefactsStore = ArtefactLogic.ArtefactInstore(dungeon.CurrentLevelDungeon);
+            ArtefactList<Artefact> artefactsStore = ArtefactLogic.ArtefactInstore(dungeon.CurrentLevelDungeon);
 
-            Printer.Print($"\n\"{shop.Name}\" have {artefactsStore.Count} item for sale:\n");
+            Printer.Print($"\n\"{shop.Name}\" have {artefactsStore.Size()} item for sale:\n");
             Printer.Print(ArtefactLogic.InfoAboutArtefactsList(artefactsStore));
 
             string key;

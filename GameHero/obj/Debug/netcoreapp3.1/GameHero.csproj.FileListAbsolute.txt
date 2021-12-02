@@ -37,3 +37,15 @@ D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.csproj.CoreCompileInp
 D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.dll
 D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.pdb
 D:\OOP\GitHubRep\GameHero\obj\Debug\netcoreapp3.1\GameHero.genruntimeconfig.cache
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.exe
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.deps.json
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.runtimeconfig.json
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.runtimeconfig.dev.json
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.dll
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\bin\Debug\netcoreapp3.1\GameHero.pdb
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.AssemblyInfoInputs.cache
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.AssemblyInfo.cs
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.csproj.CoreCompileInputs.cache
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.dll
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.pdb
+D:\itstep\oop\OOP-task-15-Game-hero\GameHero\obj\Debug\netcoreapp3.1\GameHero.genruntimeconfig.cache

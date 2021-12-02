@@ -52,24 +52,24 @@ namespace GameHero.Model
             return result;
         }
 
-        public static List<Artefact> ArtefactInstore(int dungeonCurrentLevel)
+        public static ArtefactList<Artefact> ArtefactInstore(int dungeonCurrentLevel)
         {
-            List<Artefact> result = new List<Artefact>();
+            ArtefactList<Artefact> result = new ArtefactList<Artefact>();
 
             for (int i = 0; i < dungeonCurrentLevel; i++)
             {
-                result.Add(GenerateRandomArtefacts(dungeonCurrentLevel));
+                result.AddArtefact(GenerateRandomArtefacts(dungeonCurrentLevel));
             }
 
             return result;
         }
 
-        public static string InfoAboutArtefactsList(List<Artefact> artefactsList)
+        public static string InfoAboutArtefactsList(ArtefactList<Artefact> artefactsList)
         {
             StringBuilder infoArtefacts = new StringBuilder();
             int index = 1;
 
-            if (artefactsList.Count == 0)
+            if (artefactsList.Size() == 0)
             {
                 infoArtefacts.Append($"\nDon't have artefacts.");
             }
