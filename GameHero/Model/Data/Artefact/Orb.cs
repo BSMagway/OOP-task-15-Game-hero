@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace GameHero.Model.Data.Artefact
 {
+    [Serializable]
     public class Orb : Artefact
     {
         private const string TYPE_NAME = "Orb";

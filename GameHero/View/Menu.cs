@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace GameHero.View
 {
     public static class Menu
@@ -52,5 +49,14 @@ namespace GameHero.View
 
         }
 
+        public static void LoginMenu()
+        {
+            Printer.Print("\nSelect: ");
+            Printer.Print("\n1 - create hero");
+            Printer.Print("\n2 - enter for created hero");
+            Printer.Print("\n3 - enter for default hero");
+        }
     }
+
 }
+

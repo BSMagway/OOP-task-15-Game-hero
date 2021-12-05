@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using GameHero.Model.Data.Monstrs;
-using GameHero.Model.Data;
 
 namespace GameHero.Model
 {

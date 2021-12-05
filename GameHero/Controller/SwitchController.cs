@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using GameHero.Model.Data;
 using GameHero.Model;
-using GameHero.Model.StrategyPattern;
 using GameHero.Model.Data.Artefact;
-using GameHero.Model.StrategyPattern.Search;
 using GameHero.View;
 
 namespace GameHero.Controller
@@ -158,7 +154,7 @@ namespace GameHero.Controller
                     break;
                 case "5":
                     Printer.Print($"\nEnter name: ");
-                    predicateString =Console.ReadLine();
+                    predicateString = Console.ReadLine();
                     result = HeroLogic.GetInctance().HeroInventorySearch<string>(hero, predicateString, delegate (Artefact art, string predicate) { return art.Name == predicate; });
                     Printer.Print($"\nHero artefacts search by name: {ArtefactLogic.InfoAboutArtefactsList(result)}");
                     break;

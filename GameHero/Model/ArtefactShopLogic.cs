@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using GameHero.Model.Data;
 using GameHero.Model.Data.Artefact;
 using GameHero.View;

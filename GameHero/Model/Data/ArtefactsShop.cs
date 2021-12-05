@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GameHero.Model.Data.Artefact;
-
+﻿
 namespace GameHero.Model.Data
 {
     public class ArtefactsShop

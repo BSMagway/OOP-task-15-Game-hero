@@ -1,7 +1,4 @@
 ﻿using GameHero.Model.Data.Artefact;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameHero.Model.StrategyPattern.Search
 {

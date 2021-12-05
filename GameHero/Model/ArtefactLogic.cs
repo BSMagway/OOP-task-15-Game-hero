@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using GameHero.Model.Data.Artefact;
 using GameHero.Model.Data;

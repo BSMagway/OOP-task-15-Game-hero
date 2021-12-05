@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
-using GameHero.Model.Data.Artefact;
-using GameHero.View;
+
 
 namespace GameHero.Model.Data
 {
     public class Hero
     {
-        private const string DEFAULT_NAME = "Default Hero";
+        private const string DEFAULT_NAME = "Hero";
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_START_EXPIRIENCE = 0;
         private const int DEFAULT_LEVEL_UP_EXPERIENCE = 100;
@@ -27,8 +24,8 @@ namespace GameHero.Model.Data
         private const int DEFAULT_MANA_AFTER_DEATH = 1;
 
 
-        public string Name { get; private set; }
-        public int Level { get; private set; }
+        public string Name { get; set; }
+        public int Level { get; set; }
 
 
         private int fullHealth;
@@ -37,8 +34,8 @@ namespace GameHero.Model.Data
         private int evade;
         private int expirience;
 
-        public int CurrentHealth { get; private set; }
-        public int CurrentMana { get; private set; }
+        public int CurrentHealth { get; set; }
+        public int CurrentMana { get; set; }
 
         public int Strength { get; private set; }
         public int Intellect { get; private set; }
@@ -46,9 +43,7 @@ namespace GameHero.Model.Data
         public int Constitution { get; private set; }
         public int Money { get; private set; }
 
-        //public IList<Artefact.Artefact> HeroArtefacts { get; private set; }
-
-        public ArtefactList<Artefact.Artefact> ArtefactList { get; private set; }
+        public ArtefactList<Artefact.Artefact> ArtefactList { get; set; }
 
         public int FullHealth
         {

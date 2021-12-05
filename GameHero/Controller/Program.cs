@@ -1,8 +1,9 @@
 ﻿using System;
-using GameHero.Model.Data.Artefact;
 using GameHero.Model.Data;
-using GameHero.Model;
 using GameHero.View;
+using GameHero.Controller;
+using GameHero.Model.IO;
+using GameHero.Model.IO.Implementation;
 
 namespace GameHero
 {
@@ -11,8 +12,10 @@ namespace GameHero
         static void Main(string[] args)
         {
             bool operatorOnOff = true;
-            Hero hero = new Hero("Test hero", 4, 3, 6, 7, 300);
+
+            Hero hero = LoginController.LoginUser();
             Dungeon dungeon = new Dungeon();
+
 
             while (operatorOnOff)
             {
@@ -44,6 +47,8 @@ namespace GameHero
                         Controller.SwitchController.HeroInventorySearch(hero);
                         break;
                     case "9":
+                        ISaveLoadHero saveLoadHero = new SaveLoadHero();
+                        saveLoadHero.Write(hero);
                         operatorOnOff = false;
                         break;
                     default:
@@ -52,37 +57,6 @@ namespace GameHero
                 }
 
             }
-
-                //Hero hero = new Hero();
-
-                //Neck neck = new Neck("neck1", 5, 6, 7, 8, 100);
-                //Ring ring = new Ring("ring1", 4, 2, 1, 0, 140);
-                //Orb orb = new Orb("orb1", 6, 8, 0, 0, 120);
-
-                //hero.AddArtefact(neck);
-                //hero.AddArtefact(ring);
-                //hero.AddArtefact(orb);
-
-                //Printer.Print(hero.HeroInfo());
-
-
-
-                //Console.WriteLine(hero);
-                //Console.WriteLine(HeroLogic.GetInctance().CountSumArtefactsPrice(hero));
-
-                //Neck neck = new Neck("neck1", 5, 6, 7, 8, 100);
-                //Ring ring = new Ring("ring1", 4, 2, 1, 0, 140);
-                //Orb orb = new Orb("orb1", 6, 8, 0, 0, 120);
-
-                //hero.AddArtefact(neck);
-                //hero.AddArtefact(ring);
-                //hero.AddArtefact(orb);
-
-                //Console.WriteLine(hero);
-                //Console.WriteLine(HeroLogic.GetInctance().CountSumArtefactsPrice(hero));
-
-
-
-            }
+        }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace GameHero.Model.Data.Artefact
 {
+    [Serializable]
     public class Artefact
     {
         public string Name { get; private set; }
