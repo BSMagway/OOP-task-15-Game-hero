@@ -5733,19 +5733,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bs_ma\\.nuget\\packages\\": {}
+    "C:\\Users\\402-1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\itstep\\oop\\OOP-task-15-Game-hero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+      "projectUniqueName": "D:\\OOP\\GitHubRep\\OOP-task-15-Game-hero\\GameHeroTestProject\\GameHeroTestProject.csproj",
       "projectName": "GameHeroTestProject",
-      "projectPath": "D:\\itstep\\oop\\OOP-task-15-Game-hero\\GameHeroTestProject\\GameHeroTestProject.csproj",
-      "packagesPath": "C:\\Users\\bs_ma\\.nuget\\packages\\",
-      "outputPath": "D:\\itstep\\oop\\OOP-task-15-Game-hero\\GameHeroTestProject\\obj\\",
+      "projectPath": "D:\\OOP\\GitHubRep\\OOP-task-15-Game-hero\\GameHeroTestProject\\GameHeroTestProject.csproj",
+      "packagesPath": "C:\\Users\\402-1\\.nuget\\packages\\",
+      "outputPath": "D:\\OOP\\GitHubRep\\OOP-task-15-Game-hero\\GameHeroTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bs_ma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\402-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5759,8 +5759,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\itstep\\oop\\OOP-task-15-Game-hero\\GameHero\\GameHero.csproj": {
-              "projectPath": "D:\\itstep\\oop\\OOP-task-15-Game-hero\\GameHero\\GameHero.csproj"
+            "D:\\OOP\\GitHubRep\\OOP-task-15-Game-hero\\GameHero\\GameHero.csproj": {
+              "projectPath": "D:\\OOP\\GitHubRep\\OOP-task-15-Game-hero\\GameHero\\GameHero.csproj"
             }
           }
         }
@@ -5807,7 +5807,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

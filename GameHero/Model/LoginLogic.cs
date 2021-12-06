@@ -11,6 +11,21 @@ namespace GameHero.Model
     {
         private const string DEFAULT_HERO_NAME = "Hero";
 
+        public static void CreateDefaultSave()
+        {
+            ISaveLoadLogin loadSaveLogin = new SaveLoadLogin();
+            IList<Login> heroList = loadSaveLogin.Read();
+
+            if (heroList.Count == 0)
+            {
+                Hero hero = new Hero();
+                ISaveLoadHero saveLoadHero = new SaveLoadHero();
+                saveLoadHero.Write(hero);
+                heroList.Add(new Login(DEFAULT_HERO_NAME));
+                loadSaveLogin.Write(heroList);
+            }
+        }
+
         public static bool LoginEquals(IList<Login> logins, string heroName)
         {
             foreach (Login item in logins)
@@ -26,12 +41,14 @@ namespace GameHero.Model
 
         public static IList<Login> LoadLoginList()
         {
+
             ISaveLoadLogin loadSaveLogin = new SaveLoadLogin();
             IList<Login> heroList = loadSaveLogin.Read();
 
             if (heroList.Count == 0)
             {
-                heroList.Add(new Login(DEFAULT_HERO_NAME));
+                CreateDefaultSave();
+                heroList = loadSaveLogin.Read();
             }
 
             return heroList;
@@ -85,7 +102,7 @@ namespace GameHero.Model
                 Printer.Print("Enter exist hero name (one word): ");
                 string heroName = Console.ReadLine();
 
-                if (LoginEquals(heroList, heroName))
+                if (LoginEquals(heroList, heroName) && heroName != DEFAULT_HERO_NAME)
                 {
                     hero = saveLoadHero.Read(heroName);
                     operationCreation = false;
@@ -105,22 +122,10 @@ namespace GameHero.Model
 
         public static Hero LoginDefaultHero()
         {
-            ISaveLoadLogin loadSaveLogin = new SaveLoadLogin();
-            IList<Login> heroList = loadSaveLogin.Read();
-            Hero hero = null;
+            CreateDefaultSave();
 
-            if (heroList.Count == 0)
-            {
-                heroList.Add(new Login(DEFAULT_HERO_NAME));
-                hero = new Hero();
-            }
-            else
-            {
-                ISaveLoadHero saveLoadHero = new SaveLoadHero();
-                hero = saveLoadHero.Read(DEFAULT_HERO_NAME);
-            }
-
-            loadSaveLogin.Write(heroList);
+            ISaveLoadHero saveLoadHero = new SaveLoadHero();
+            Hero hero = saveLoadHero.Read(DEFAULT_HERO_NAME);
 
             return hero;
         }
