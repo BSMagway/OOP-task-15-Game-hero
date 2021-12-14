@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using GameHero.Model.Data;
 using GameHero.Model.Data.Artefact;
 
@@ -101,14 +102,25 @@ namespace GameHero.Model
 
         public ArtefactList<Artefact> HeroInventorySearch<T>(Hero hero, T predicate, SearchArthefactsDelegate<T> searchArthefactsDelegate)
         {
+            //ArtefactList<Artefact> searchInInventory = new ArtefactList<Artefact>();
+
+            //foreach (Artefact item in hero.ArtefactList)
+            //{
+            //    if (searchArthefactsDelegate(item, predicate))
+            //    {
+            //        searchInInventory.AddArtefact(item);
+            //    }
+            //}
+
+            var lin = from item in hero.ArtefactList
+                      where searchArthefactsDelegate(item, predicate)
+                      select item;
+
             ArtefactList<Artefact> searchInInventory = new ArtefactList<Artefact>();
 
-            foreach (Artefact item in hero.ArtefactList)
+            foreach (Artefact item in lin)
             {
-                if (searchArthefactsDelegate(item, predicate))
-                {
-                    searchInInventory.AddArtefact(item);
-                }
+                searchInInventory.AddArtefact(item);
             }
 
             return searchInInventory;
